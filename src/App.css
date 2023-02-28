@@ -1,12 +1,18 @@
 .App {
   text-align: center;
 }
+@media screen and (min-width: 768px) and (max-width: 1366px) {
+  html {
+  zoom: 0.75;
+}
+}
 :root body{
+  font-family: 'Tilt Neon', cursive;
   background-color: lightgreen;
   background-image: url('./background_anime.png');
   background-repeat: no-repeat;
   background-position-x: 80%;
-  background-position-y: 230%;
+  background-position-y: 60%;
 }
 .Navul {
   list-style-type: none;
@@ -44,7 +50,7 @@
   padding: 12rem 15rem;
   float: left;
   letter-spacing: 0.1em;
-  word-spacing: 0.7em;
+  display: block;
 } 
 .Maincopy a {
   text-decoration: none;

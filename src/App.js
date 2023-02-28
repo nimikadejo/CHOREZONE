@@ -17,9 +17,13 @@ function App() {
 	  </ul>
 	</nav>
 	<main className="Maincopy">
-	    <h1 style={{fontSize: "40px"}}>Get Your Chores <br />
-		Done in a Click<br/>
+	    <h1 style={{fontSize: "48px"}}>Get Your Chores Done <br />
+		in a Click!<br/>
 	    </h1>
+		<p style={{fontSize: "15px"}}>Welcome to our new web app!<br /> 
+			Our app is designed to make your life easier <br />
+			by providing a simple and intuitive interface for<br />
+			getting the professional help you need in your home.</p>
 	    <p><button class="button-23" role="button">
 			<a href="google.com">Book Now!</a></button></p>
 	</main>
