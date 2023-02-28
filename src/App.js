@@ -1,23 +1,34 @@
-import logo from './logo.svg';
+import 	logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <nav>
+	  <ul className="Navul">
+	    <li><a className="home" href="google.com"
+		style={{float: "left"}}>
+			<img src="./logo.svg" width="45px" height="40px" /></a></li>
+	    <li><a href="google.com">About</a></li>
+	    <li><a href="google.com">Get Help</a></li>
+	    <li><a href="google.com">Blog</a></li>
+	    <li><a href="google.com">Services</a></li>
+	    <li><a href="google.com">Log In</a></li>
+	    <li><a href="google.com">Sign Up</a></li>
+	  </ul>
+	</nav>
+	<main className="Maincopy">
+	    <h1> Chores Done in a  
+	    <a href="google.com">Click</a>
+	    </h1>
+	    <p><button type="button" class="booking">
+	    <a href="google.com">Book Now!</a>
+	    </button></p>
+	</main>
+	<footer>
+	    <small>Copyright ©2023 ChoreZone Dev, All rights reserved</small>
+	    <h6 style={{float: "left", textAlign: "center"}}>Terms</h6>
+	</footer>
     </div>
   );
 }
