@@ -3,7 +3,7 @@
 }
 @media screen and (min-width: 768px) and (max-width: 1366px) {
   html {
-  zoom: 0.75;
+  zoom: 0.8;
 }
 }
 :root body{
@@ -11,7 +11,7 @@
   background-color: lightgreen;
   background-image: url('./background_anime.png');
   background-repeat: no-repeat;
-  background-position-x: 80%;
+  background-position-x: 90%;
   background-position-y: 60%;
 }
 .Navul {
@@ -39,6 +39,10 @@
 .Navul li a:hover{
   background-color: lightgreen;
   color: green;
+}
+.homelogo:hover {
+  opacity: 1.0;
+  box-shadow: none;
 }
 .active{
   float: left
@@ -77,4 +81,8 @@
   float: right;
   display: flex;
   padding: 0.5px 13px;
+}
+.Footer a {
+  text-decoration: none;
+  color: whitesmoke;
 }
