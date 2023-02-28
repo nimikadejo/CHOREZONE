@@ -6,9 +6,8 @@ function App() {
     <div className="App">
         <nav>
 	  <ul className="Navul">
-	    <li><a className="home" href="google.com"
-		style={{float: "left"}}>
-			<img src="./logo.svg" width="45px" height="40px" /></a></li>
+	    <li style={{float: "left"}}><a href="google.com" width="50px" height="35px">
+			<img src="./react.svg" /></a></li>
 	    <li><a href="google.com">About</a></li>
 	    <li><a href="google.com">Get Help</a></li>
 	    <li><a href="google.com">Blog</a></li>
@@ -18,16 +17,21 @@ function App() {
 	  </ul>
 	</nav>
 	<main className="Maincopy">
-	    <h1> Chores Done in a  
-	    <a href="google.com">Click</a>
+	    <h1 style={{fontSize: "40px"}}>Get Your Chores <br />
+		Done in a Click<br/>
 	    </h1>
-	    <p><button type="button" class="booking">
-	    <a href="google.com">Book Now!</a>
-	    </button></p>
+	    <p><button class="button-23" role="button">
+			<a href="google.com">Book Now!</a></button></p>
 	</main>
-	<footer>
-	    <small>Copyright ©2023 ChoreZone Dev, All rights reserved</small>
-	    <h6 style={{float: "left", textAlign: "center"}}>Terms</h6>
+	<section>
+		
+	</section>
+	<footer className='Footer'>
+		<ul>
+		   <li style={{float: "left", fontSize: "small"}}><h6>©2023 ChoreZone Dev.</h6></li> 
+	       <li><h4>Terms</h4></li>
+		   <li><h4>Privacy</h4></li>
+		</ul> 
 	</footer>
     </div>
   );
