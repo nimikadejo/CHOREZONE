@@ -1,5 +1,6 @@
 import React from "react";
-import Landing from "./landing";
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Landing from "./Components/landing.js"
 
 function App() {
   return (

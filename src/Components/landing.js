@@ -1,4 +1,4 @@
-import 	faviconn from './faviconn.png';
+import 	faviconn from '../imgs/faviconn.png';
 import './Landing.css';
 
 function Landing() {
@@ -6,8 +6,9 @@ function Landing() {
     <div className="App">
       <nav>
 	   <ul className="Navul">
-	     <li style={{float: "left"}}><a href="google.com" >
-			<img class="homelogo" src={faviconn} alt="chorezone-logo" width="60px" height="35px"/>
+	     <li style={{float: "left"}}><a href="google.com" style={{pointerEvents: "none"}}>
+			<img class="homelogo" src={faviconn} alt="chorezone-logo" 
+			width="40px" height="25px"/>
 		 </a></li>
 	     <li><a href="google.com">About</a></li>
 	     <li><a href="https://twitter.com/nimikadejo">Get Help</a></li>
@@ -25,7 +26,7 @@ function Landing() {
 			Our app is designed to make your life easier <br />
 			by providing a simple and intuitive interface for<br />
 			getting the professional help you need in your home.</p>
-	    <p><button class="btn" role="button" width="50px">
+	    <p><button class="btn" width="50px">
 			<a href="https://google.com">Book Now!</a></button></p>
 	  </main>
 	
