@@ -1,0 +1,128 @@
+/* log in and sign up*/
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Tilt Neon', cursive;
+}
+.container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: lightgreen;
+}
+.form {
+  position: absolute;
+  margin: 50px 0;
+  width: 100%;
+  padding: 35px;
+  max-width: 430px;
+  border-radius: 10px;
+  background-color: white;
+}
+.forms.show-signup .form.signup{
+  opacity: 1;
+  pointer-events: auto;
+}
+.forms.show-signin .form.login{
+  opacity: 0;
+  pointer-events: none;
+}
+header {
+  font-size: 25px;
+  text-align: center;
+}
+form {
+  margin-top: 30px;
+}
+.form .field {
+  position: relative;
+  height: 55px;
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 6px;
+}
+.field input,
+.field button {
+  height: 100%;
+  width: 100%;
+  border: none;
+  font-size: 16px;
+  border-radius: 6px;
+}
+.field input{
+  outline: none;
+  padding: 0px 15px;
+  border: 1px solid #CACACA;
+}
+.field input:focus{
+  border-bottom-width: 2.5px;
+}
+.field button{
+  background-color: rgb(48, 130, 48);
+  color: #FFF;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+.field button:hover{
+  background-color: rgb(94, 167, 94);
+}
+.form-link {
+  text-align: center;
+  margin-top: 10px;
+}
+.form-link span, 
+.form-link a{
+  font-size: 14px;
+}
+form a{
+  color: rgb(48, 130, 48);
+  text-decoration: none;
+}
+form a:hover{
+  text-decoration: underline;
+}
+.line{
+  height: 1px;
+  width: 100%;
+  position: relative;
+  margin: 36px 0;
+  background-color: #d4d4d4;
+}
+.line::before{
+  content: 'Or';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #FFF;
+  color: #8b8b8b;
+  padding: 0 15px;
+}
+.media-options a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+a.google{
+  color: rgb(48, 130, 48);
+  background-color: white;
+  border: 1px solid #cacaca;
+  opacity: 0.8;
+}
+img.google-img{
+  height: 20px ;
+  width: 20px ;
+  object-fit: cover;
+  position: absolute;
+  left: 55px;
+}
+@media screen and (max-width: 400px) {
+  .form{
+    padding: 15px;
+  }
+}
