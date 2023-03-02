@@ -4,7 +4,8 @@ import Landing from "./Components/landing.js"
 
 function App() {
   return (
-	<Landing />
+
+	    <Landing />
   )
 }
 

@@ -3,7 +3,7 @@ import React from 'react';
 
 function Login() {
   return (
-    <section className="container forms">
+    <section className="container forms" style={{boxSizing: "border-box"}}>
                   <div className="form login">
                      <div className="login-content">
                         <header>Log In</header>

@@ -3,7 +3,7 @@ import React from 'react';
 
 function Signup() {
   return (
-                <div className="form signup">
+                <div className="form signup" style={{boxSizing: "border-box"}}>
                      <div className="login-content">
                         <header>Create Your Account</header>
                         <form action="https://google.com">
