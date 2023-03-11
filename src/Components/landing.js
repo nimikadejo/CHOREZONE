@@ -1,4 +1,4 @@
-import 	faviconn from '../imgs/faviconn.png';
+import faviconn from '../imgs/faviconn.png';
 import Alert from "../imgs/Alert.png"
 import apay from "../imgs/apay.png"
 import ASign from "../imgs/ASign.png"
@@ -10,7 +10,7 @@ function Landing() {
       <nav>
 	   <ul className="Navul">
 	     <li style={{float: "left"}}><a href="google.com" style={{pointerEvents: "none"}}>
-			<img class="homelogo" src={faviconn} alt="chorezone-logo" 
+			<img className="homelogo" src={faviconn} alt="chorezone-logo" 
 			width="40px" height="25px"/>
 		 </a></li>
 	     <li><a href="#About">About</a></li>
@@ -29,7 +29,7 @@ function Landing() {
 			Our app is designed to make your life easier <br />
 			by providing a simple and intuitive interface for<br />
 			getting the professional help you need in your home.</p>
-	    <p><button class="btn" width="50px">
+	    <p><button className="btn" width="50px">
 			<a href="https://google.com">Book Now!</a></button></p>
 	  </main>
 	

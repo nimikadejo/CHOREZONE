@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Tilt Neon', cursive;
+}
+:root{
+    /*-----colors----*/
+    --primary-color: rgba(6, 6, 109, 0.582);
+    --panel-color: white;
+    --text-color: black;
+    --black-light-color: #707070;
+    --border-color: #e6e5e5;
+    --toggle-color: #DDD;
+    --box1-color: #4DA3FF;
+    --box2-color: #FFE6AC;
+    --box-color: #E7D1FC;
+    --title-icon-color: #fff;
+
+    /*------Transition----*/
+    --tran-05: all 0.5s ease;
+    --tran-03: all 0.3s ease;
+    --tran-03: all 0.2s ease;
+}
+body{
+    min-height: 100vh;
+    background-color: var(--primary-color);
+}
+nav{
+    position:fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width:250px;
+    padding: 10px 14px;
+    background-color: var(--panel-color);
+}
+nav .logo-name{
+    display: flex;
+    align-items:center;
+}
+nav .logo-image{
+    display: flex;
+    justify-content: center;
+    min-width: 45px;
+}
+nav .logo-image img{
+    width: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+nav .logo-name .logo_name{
+    font-size: 21px;
+    color: var(--text-color);
+    margin-left: 14px;
+}
+nav .menu-items{
+    margin-top: 40px;
+    height:calc(100% - 90px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.menu-items li {
+    list-style: none;
+}
+.menu-items li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    height: 50px;
+    position:relative;
+}
+.nav-links li a:hover:before{
+    content: "";
+    position: absolute;
+    left: -7px;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+}
+.menu-items li a i{
+    min-width: 45px;
+    font-size: 24px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--black-light-color);
+}
+.menu-items li a span{
+    color: var(--black-light-color);
+    font-size: 20px;
+    font-weight: bold;
+}
+.nav-links li a:hover i,
+.nav-links li a:hover .link-name{
+    color: var(--primary-color) 
+}
