@@ -32,7 +32,7 @@ nav{
     left: 0;
     height: 100%;
     width:250px;
-    padding: 10px 14px;
+    padding: .625rem .875rem;
     background-color: var(--panel-color);
 }
 nav .logo-name{
