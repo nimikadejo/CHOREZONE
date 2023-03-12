@@ -37,7 +37,7 @@ function Login() {
       <div className="form login">
         <div className="login-content">
           <header>Log In</header>
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} className="allforms">
             <div className="field input">
               <input type="email" name="email" placeholder="Email" className="input" value={userDetails.email} onChange={handleChange} />
             </div>

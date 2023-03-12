@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
-import { collection, doc, getDocs, getFirestore, query, setDoc, where } from "firebase/firestore"
+import { collection, doc, getDoc, getDocs, getFirestore, query, setDoc, where } from "firebase/firestore"
 const firebaseConfig = {
     apiKey: "AIzaSyD951GXn2hqsTGoaFWW8SKNIU_3X_EElbo",
     authDomain: "chorezone.firebaseapp.com",

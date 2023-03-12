@@ -43,10 +43,11 @@ export const Signup = () => {
   }
 
   return (
-    <div className="form signup" style={{ boxSizing: "border-box" }} >
+    <section className="container forms" style={{ boxSizing: "border-box" }}>
+     <div className="form signup" style={{ boxSizing: "border-box" }} >
       <div className="login-content">
         <header>Create Your Account</header>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="allforms">
           <div className="field input">
             <input type="text" placeholder="Full Name" className="input" name="displayName"
               value={userDetails.displayName} onChange={handleChange} required />
@@ -84,8 +85,9 @@ export const Signup = () => {
             <span className='the-span'> Continue with Google</span>
           </a>
         </div>
-      </div>
-    </div >
+        </div>
+       </div>
+      </section>
   );
 }
 
