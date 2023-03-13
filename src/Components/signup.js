@@ -30,7 +30,7 @@ export const Signup = () => {
       return;
     }
     try {
-      await createUserDocumentFromAuth(userDetails.email, userDetails.password);
+      await createUserDocumentFromAuth(userDetails);
       console.log("User is signed up.")
       resetUserDetails()
     } catch (error) {

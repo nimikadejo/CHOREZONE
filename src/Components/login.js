@@ -7,7 +7,7 @@ const defaultUserDetails = {
   email: "",
   password: ""
 }
-function Login() {
+export const Login = () => {
   const [userDetails, setUserDetails] = useState(defaultUserDetails);
 
   const handleChange = (event) => {
