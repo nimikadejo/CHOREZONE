@@ -10,6 +10,7 @@ const firebaseConfig = {
     appId: "1:258708490886:web:c6185cc8cb0be8d78e9f07"
 };
 
+// eslint-disable-next-line
 const app = initializeApp(firebaseConfig);
 
 const googleProvider = new GoogleAuthProvider();
@@ -33,22 +34,17 @@ export const getUser = async (email) => {
 }
 
 export const createUserDocumentFromAuth = async (
-    userAuth,
-    additionalInformation = {}
-) => {
+    userAuth) => {
     if (!userAuth) return;
     const userDocRef = doc(db, `users/${userAuth.email}`);
     const userSnapshot = await getDoc(userDocRef);
     if (!userSnapshot.exists()) {
-        const { displayName, email } = userAuth;
         const createdAt = new Date();
 
         try {
             await setDoc(userDocRef, {
-                displayName,
-                email,
-                createdAt,
-                ...additionalInformation,
+                ...userAuth,
+                createdAt
             });
         } catch (error) {
             alert(error);

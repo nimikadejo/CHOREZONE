@@ -1,13 +1,13 @@
 import './login.css';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { signInAuthUserWithEmailAndPassword } from '../utilities/firebase';
+import { getUser } from '../utilities/firebase';
 
 const defaultUserDetails = {
   email: "",
   password: ""
 }
-function Login() {
+export const Login = () => {
   const [userDetails, setUserDetails] = useState(defaultUserDetails);
 
   const handleChange = (event) => {
@@ -19,8 +19,8 @@ function Login() {
     e.preventDefault();
     console.log(userDetails);
     try {
-      await signInAuthUserWithEmailAndPassword(userDetails.email, userDetails.password);
-      // User is signed in.
+      const user = await getUser(userDetails.email);
+      console.log(user);
     } catch (error) {
       if (error.code === "auth/user-not-found") {
         alert("User not found.")
