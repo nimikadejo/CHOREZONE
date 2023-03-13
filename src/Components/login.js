@@ -2,13 +2,17 @@ import './login.css';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { getUser } from '../utilities/firebase';
+import { auth } from '../utilities/firebase';
+import { useHistory } from "react-router-dom"
 
 const defaultUserDetails = {
   email: "",
   password: ""
 }
+
 export const Login = () => {
   const [userDetails, setUserDetails] = useState(defaultUserDetails);
+  const history = useHistory();
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -21,6 +25,7 @@ export const Login = () => {
     try {
       const user = await getUser(userDetails.email);
       console.log(user);
+      handleSignIn(userDetails.email, userDetails.password);
     } catch (error) {
       if (error.code === "auth/user-not-found") {
         alert("User not found.")
@@ -29,6 +34,16 @@ export const Login = () => {
       }
     }
   };
+  const handleSignIn = async(email, password) => {
+    try {
+      await auth.signInWithEmailAndPassword(email, password);
+      // If sign-in is successful, redirect to the dashboard
+      history.push('/dashboard');
+    } catch (error) {
+      console.log(error.message);
+    }
+  }
+  
 
 
 
