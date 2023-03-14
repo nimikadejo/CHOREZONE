@@ -1,9 +1,9 @@
 import './login.css';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { getUser } from '../utilities/firebase';
 import { auth } from '../utilities/firebase';
-import { useHistory } from "react-router-dom"
+
 
 const defaultUserDetails = {
   email: "",
@@ -43,8 +43,6 @@ export const Login = () => {
       console.log(error.message);
     }
   }
-  
-
 
 
   return (

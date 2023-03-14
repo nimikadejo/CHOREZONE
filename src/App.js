@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Landing from "./components/landing";
 import {Login} from "./components/login";
 import {Signup} from "./components/signup";
-import {Dashboard} from "./components/dashboard"
+import Dashboard from "./components/dashboard"
 
 function App() {
   return (
