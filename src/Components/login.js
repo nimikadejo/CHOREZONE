@@ -1,8 +1,9 @@
 import './login.css';
 import React, { useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 import { getUser } from '../utilities/firebase';
 import { auth } from '../utilities/firebase';
+import { handleSignIn } from '../utilities/auth';
 
 
 const defaultUserDetails = {
@@ -12,13 +13,11 @@ const defaultUserDetails = {
 
 export const Login = () => {
   const [userDetails, setUserDetails] = useState(defaultUserDetails);
-  const history = useHistory();
 
   const handleChange = (event) => {
     const { name, value } = event.target;
     setUserDetails({ ...userDetails, [name]: value });
   };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(userDetails);
@@ -34,15 +33,6 @@ export const Login = () => {
       }
     }
   };
-  const handleSignIn = async(email, password) => {
-    try {
-      await auth.signInWithEmailAndPassword(email, password);
-      // If sign-in is successful, redirect to the dashboard
-      history.push('/dashboard');
-    } catch (error) {
-      console.log(error.message);
-    }
-  }
 
 
   return (
